@@ -1,3 +1,8 @@
+For the following code, generate test cases as per the Requirements and Assumptions that follow.
+Use Jest framework for testing.
+
+```jsx
+
 import React, { useState, useEffect } from 'react';
 
 function App() {
@@ -202,3 +207,28 @@ function App() {
 }
 
 export default App;
+
+
+```
+
+
+Requirement 1: Page should have a div with classname "form" containing 6 input fields with name attribute values "date", "description", "debitAccount", "creditAccount", "debitAmount" and "creditAmount". The form should also contain a button with text "Add Entry"
+Assumption 1: Values of name attribute in the form for entry are "date", "description", "debitAccount", "creditAccount", "debitAmount" and "creditAmount". And the text in the button to add the entries is "Add Entry".
+
+Requirement 2: There should initially be only one table with table headers "Date", "Description", "Debit Account", "Credit Account", "Debit Amount" and "Credit Amount".
+Assumption 2: The headers of the columns in the table are the same as the ones mentioned in the corresponding requirement.
+
+Requirement 3: There should be a select element in with only one option with the text "Select Account".
+Assumption 3: The default option of the select element has text "Select Account".
+
+Requirement 4: There should be a button with text "Generate Ledger" in the page which should initially be disabled.
+Assumption 4: The button to generate ledger is named as "Generate Ledger".
+
+Requirement 5: Firstly enter the following values: todays date, "Test 1", "A1", "A2", 250, 250 into the date, description, debit account, credit account, debit amount and credit amount fields in the form. The click "Add Entry" button. After this the table below should have corresponding values in corresponding columns.
+Assumption 5: There is a column in the table to match each of the valeus in the entry form.
+
+Requirement 6: After adding an entry in the table below as done in requirement 4, 2 new options should appear in the select element below and the "Generate Ledger" button should be enabled.
+Assumption 6: There is only on select element in the page and the button beside it is named "Generate Ledger".
+
+Requirement 7: The select element should now have an option with value "A2". When this option is selected and "Generate Ledger" button is clicked, a new table should appear in page and it should have headers: "Date", "Description", "Debit", "Credit". The table should have a single row with values: today's date in "yyyy-mm-dd" format, "Test 1", "" and "250".
+Assumption 7: The headers are the same as specified above and this requirement is checked after Requirement 5. Also, the date format by default is "yyyy-mm-dd".

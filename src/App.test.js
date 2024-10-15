@@ -1,8 +1,15 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('Form should have required input fields and Add Entry button', () => {
+  const { getByLabelText, getByText } = render(<App />);
+
+  expect(getByLabelText('Date')).toBeInTheDocument();
+  expect(getByLabelText('Description')).toBeInTheDocument();
+  expect(getByLabelText('Debit Account')).toBeInTheDocument();
+  expect(getByLabelText('Credit Account')).toBeInTheDocument();
+  expect(getByLabelText('Debit Amount')).toBeInTheDocument();
+  expect(getByLabelText('Credit Amount')).toBeInTheDocument();
+
+  expect(getByText('Add Entry')).toBeInTheDocument();
 });
